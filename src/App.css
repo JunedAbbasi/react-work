@@ -1,0 +1,167 @@
+
+.image-accordion-background {
+  position: fixed;
+  inset: -20px;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transition: 0.5s;
+}
+
+.image-accordion-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 70%);
+}
+
+.image-accordion {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.image-accordion-item {
+  position: relative;
+  overflow: hidden;
+  width: 64px;
+  height: 500px;
+  border-radius: 36px;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.image-accordion-item:hover {
+  opacity: 0.75;
+}
+
+.image-accordion :is(h2, p) {
+  margin: 0;
+}
+
+.image-accordion-item h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(255 255 255 / 96%);
+}
+
+.image-accordion-item p {
+  color: rgb(255 255 255 / 66%);
+}
+
+.image-accordion-item.active {
+  width: 400px;
+  opacity: 1;
+}
+
+.image-accordion-item .material-symbols-outlined {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  color: rgb(0 0 0 / 80%);
+  background: rgb(255 255 255 / 70%);
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.image-accordion-item .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  padding: 100px 0 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
+  transition: 0.25s;
+}
+
+.image-accordion-item.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-accordion-item img {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 150%;
+  filter: grayscale(0.6);
+}
+
+  /* Bar Css */
+
+ 
+  /* .progress1 {
+    background: rgba(249, 247, 247, 0.925);  
+    box-shadow: inset 0 1px 2px rgba(248, 243, 243, 0.944), 0 1px rgba(255, 255, 255, 0.08);
+  } */
+  
+  /* .progress-bar1 {
+    height: 5px;
+  } */
+  
+  /* .progress-moved1 .progress-bar1 {
+    width: 85%; 
+    background : linear-gradient(to left, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);  
+    animation: progressAnimation 4s;
+    
+  } */
+  
+  @keyframes progressAnimation {
+    0%   { width: 5%;}
+    100% { width: 83%; }
+  }
+
+    /* Bar 60% */
+
+  /* .progress-bar2 {
+    height: 5px;
+  } */
+  
+  /* .progress-moved2 .progress-bar2 {
+    width: 60%; 
+    background : linear-gradient(to left, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);  
+    animation: barAnimation 6s;
+    
+  } */
+  
+  @keyframes barAnimation {
+    0%   { width: 5%;}
+    100% { width: 60%; }
+  }
+
+  /* .progress-bar3 {
+    height: 5px;
+  } */
+  
+  /* .progress-moved3 .progress-bar3 {
+    width: 90%; 
+    background : linear-gradient(to left, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);  
+    animation: lastAnimation 6s;
+    
+  } */
+  
+  @keyframes lastAnimation {
+    0%   { width: 5%;}
+    100% { width: 75%; }
+  }
+    
+
+  .animated-form iframe{
+    width: 100%;
+    height: 100%;
+  }
